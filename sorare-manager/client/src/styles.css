@@ -1,0 +1,328 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #f7f9ff;
+  background: #070b18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(124, 92, 255, 0.35), transparent 34rem),
+    radial-gradient(circle at top right, rgba(0, 224, 164, 0.18), transparent 34rem),
+    #070b18;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+  background: linear-gradient(135deg, #7c5cff, #00e0a4);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.07);
+  outline: none;
+}
+
+select option {
+  color: black;
+}
+
+.page {
+  width: min(1240px, calc(100% - 2rem));
+  margin: auto;
+  padding: 2rem 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  gap: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.eyebrow {
+  color: #00e0a4;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 5.4rem);
+  line-height: 0.9;
+  margin: 0;
+  max-width: 900px;
+}
+
+.subtitle,
+.hint {
+  color: #aab4d4;
+  line-height: 1.6;
+}
+
+.panel,
+.heroCard {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+}
+
+.panel {
+  padding: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.heroCard {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.3rem;
+}
+
+.heroCard strong {
+  display: block;
+  font-size: 4rem;
+}
+
+.heroCard span {
+  color: #aab4d4;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.stat {
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.stat span {
+  color: #aab4d4;
+  font-size: 0.85rem;
+}
+
+.stat strong {
+  display: block;
+  color: #00e0a4;
+  font-size: 1.65rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1.2rem;
+}
+
+.stack {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.full {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.connected {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  color: #00e0a4;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.chips span {
+  color: #8affdc;
+  background: rgba(0, 224, 164, 0.14);
+  border: 1px solid rgba(0, 224, 164, 0.3);
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.cardImage {
+  height: 220px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(124, 92, 255, 0.35), transparent),
+    #10162b;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shirt {
+  width: 72px;
+  height: 84px;
+  background: linear-gradient(135deg, #7c5cff, #00e0a4);
+  clip-path: polygon(
+    20% 0,
+    35% 12%,
+    65% 12%,
+    80% 0,
+    100% 22%,
+    83% 43%,
+    76% 35%,
+    76% 100%,
+    24% 100%,
+    24% 35%,
+    17% 43%,
+    0 22%
+  );
+}
+
+.cardBody {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem;
+}
+
+.cardBody span {
+  color: #aab4d4;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.badges small {
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.teams {
+  display: grid;
+  gap: 1rem;
+}
+
+.team {
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(0, 0, 0, 0.26);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.teamHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.teamHead strong {
+  color: #00e0a4;
+  font-size: 1.25rem;
+}
+
+.miniGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.65rem;
+}
+
+.miniCard {
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.miniCard .shirt {
+  width: 42px;
+  height: 50px;
+  margin: 0 auto 0.5rem;
+}
+
+.miniCard strong,
+.miniCard span,
+.miniCard small {
+  display: block;
+}
+
+.miniCard span,
+.miniCard small,
+li {
+  color: #aab4d4;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .miniGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

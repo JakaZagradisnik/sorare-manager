@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "install:all": "npm install --workspaces"
+  },
+  "workspaces": ["server", "client"],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
